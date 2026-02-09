@@ -1,0 +1,39 @@
+.current-weather {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.current-weather h2 {
+  margin-bottom: 0.25rem;
+}
+
+.current-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.current-main img {
+  width: 64px;
+  height: 64px;
+}
+
+.temp {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.condition {
+  color: var(--color-muted);
+  margin: 0.25rem 0 1rem;
+}
+
+.current-details {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
