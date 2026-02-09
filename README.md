@@ -12,10 +12,10 @@ Browser Geolocation → React Frontend → Express Backend → WeatherAPI.com
 **Key concept**: The browser gets the user's location, makes ONE request to your backend. The backend makes TWO parallel requests to WeatherAPI.com (current conditions + 3-day forecast), combines the results, and sends them back. The API key never leaves the server.
 
 ```
-┌─────────────┐     GET /api/weather      ┌─────────────┐    current.json     ┌──────────────┐
-│             │     ?lat=X&lon=Y          │             │ ──────────────────> │              │
+┌─────────────┐     GET /api/weather      ┌─────────────┐    current.json    ┌──────────────┐
+│             │     ?lat=X&lon=Y          │             │ ──────────────────>│              │
 │   React     │ ────────────────────────> │   Express   │                    │  WeatherAPI  │
-│   Frontend  │ <──────────────────────── │   Backend   │ <──────────────────│    .com       │
+│   Frontend  │ <──────────────────────── │   Backend   │ <──────────────────│    .com      │
 │  :5173      │   { location, current,    │  :3001      │    forecast.json   │              │
 │             │     forecast }            │             │ ──────────────────>│              │
 └─────────────┘                           └─────────────┘ <──────────────────└──────────────┘
